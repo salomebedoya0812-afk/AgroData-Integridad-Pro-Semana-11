@@ -1,0 +1,3 @@
+Reporte base - AgroData Integridad Pro
+Este archivo sirve como ejemplo de reporte en texto plano.
+El estudiante debe generar un nuevo reporte desde la web después de analizar los datos.

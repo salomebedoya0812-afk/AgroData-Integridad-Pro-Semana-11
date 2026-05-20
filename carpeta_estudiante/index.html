@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgroData Integridad Pro</title>
+  <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__content">
+      <p class="eyebrow"><i class="fa-solid fa-database"></i> Semana 11 · Artefacto del entorno</p>
+      <h1>AgroData Integridad Pro</h1>
+      <p>Sistema educativo para analizar archivos CSV y JSON, revisar integridad de datos y generar reportes técnicos.</p>
+      <div class="hero__actions">
+        <button id="btnAnalizar" class="btn btn-primary"><i class="fa-solid fa-magnifying-glass-chart"></i> Analizar datos</button>
+        <button id="btnExportarTXT" class="btn"><i class="fa-solid fa-file-lines"></i> Exportar TXT</button>
+        <button id="btnExportarJSON" class="btn"><i class="fa-solid fa-code"></i> Exportar JSON</button>
+        <button id="btnExportarPDF" class="btn"><i class="fa-solid fa-file-pdf"></i> Exportar PDF</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="grid metrics" aria-label="Indicadores de integridad">
+      <article class="card metric-card">
+        <span class="metric-icon info"><i class="fa-solid fa-table"></i></span>
+        <div>
+          <p>Total registros</p>
+          <strong id="totalRegistros">0</strong>
+        </div>
+      </article>
+      <article class="card metric-card">
+        <span class="metric-icon ok"><i class="fa-solid fa-circle-check"></i></span>
+        <div>
+          <p>Válidos</p>
+          <strong id="registrosValidos">0</strong>
+        </div>
+      </article>
+      <article class="card metric-card">
+        <span class="metric-icon warning"><i class="fa-solid fa-triangle-exclamation"></i></span>
+        <div>
+          <p>Advertencias</p>
+          <strong id="advertencias">0</strong>
+        </div>
+      </article>
+      <article class="card metric-card">
+        <span class="metric-icon danger"><i class="fa-solid fa-circle-xmark"></i></span>
+        <div>
+          <p>Errores</p>
+          <strong id="errores">0</strong>
+        </div>
+      </article>
+    </section>
+
+    <section class="layout-two">
+      <article class="card">
+        <div class="section-title">
+          <h2><i class="fa-solid fa-chart-pie"></i> Gráfico de integridad</h2>
+          <p>Distribución de registros válidos, advertencias y errores.</p>
+        </div>
+        <canvas id="graficoIntegridad" height="180"></canvas>
+      </article>
+
+      <article class="card">
+        <div class="section-title">
+          <h2><i class="fa-solid fa-clipboard-list"></i> Diagnóstico técnico</h2>
+          <p>Resumen de problemas encontrados en los archivos de datos.</p>
+        </div>
+        <ul id="listaDiagnostico" class="diagnosis-list">
+          <li>Presiona <strong>Analizar datos</strong> para iniciar.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="card">
+      <div class="section-title">
+        <h2><i class="fa-solid fa-file-csv"></i> Registros de producción CSV</h2>
+        <p>Datos cargados desde <code>data/produccion_base.csv</code> y <code>data/datos_con_errores.csv</code>.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Fecha</th>
+              <th>Producto</th>
+              <th>Cantidad</th>
+              <th>Unidad</th>
+              <th>Responsable</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody id="tablaProduccion"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="section-title">
+        <h2><i class="fa-solid fa-boxes-stacked"></i> Inventario JSON</h2>
+        <p>Datos cargados desde <code>data/inventario_base.json</code>.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Producto</th>
+              <th>Cantidad</th>
+              <th>Unidad</th>
+              <th>Estado</th>
+              <th>Diagnóstico</th>
+            </tr>
+          </thead>
+          <tbody id="tablaInventario"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="vendor/papaparse.min.js"></script>
+  <script src="vendor/chart.umd.js"></script>
+  <script src="vendor/sweetalert2.all.min.js"></script>
+  <script src="vendor/jspdf.umd.min.js"></script>
+
+  <script src="js/storage.js"></script>
+  <script src="js/dataService.js"></script>
+  <script src="js/validators.js"></script>
+  <script src="js/reports.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

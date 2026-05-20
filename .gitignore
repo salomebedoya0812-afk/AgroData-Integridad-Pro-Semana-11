@@ -1,0 +1,20 @@
+# Material privado del profesor
+carpeta_profesor/
+
+# Dependencias y librerías descargadas
+node_modules/
+carpeta_estudiante/node_modules/
+carpeta_estudiante/vendor/
+carpeta_profesor/solucion-final/node_modules/
+carpeta_profesor/solucion-final/vendor/
+
+# Archivos generados
+*.log
+.DS_Store
+Thumbs.db
+.vscode/.ropeproject
+
+# Comprimidos locales
+*.zip
+*.rar
+*.7z

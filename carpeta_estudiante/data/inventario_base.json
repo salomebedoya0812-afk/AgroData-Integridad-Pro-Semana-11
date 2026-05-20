@@ -1,0 +1,37 @@
+[
+  {
+    "id": "INV-001",
+    "producto": "Concentrado bovino",
+    "cantidad": 12,
+    "unidad": "bultos",
+    "estado": "disponible"
+  },
+  {
+    "id": "INV-002",
+    "producto": "Fertilizante orgánico",
+    "cantidad": -4,
+    "unidad": "sacos",
+    "estado": "revision"
+  },
+  {
+    "id": "INV-003",
+    "producto": "Semillas de maíz",
+    "cantidad": 0,
+    "unidad": "paquetes",
+    "estado": "bajo"
+  },
+  {
+    "id": "INV-004",
+    "producto": "",
+    "cantidad": 20,
+    "unidad": "litros",
+    "estado": "activo"
+  },
+  {
+    "id": "INV-005",
+    "producto": "Melaza",
+    "cantidad": "abc",
+    "unidad": "galones",
+    "estado": "disponible"
+  }
+]
