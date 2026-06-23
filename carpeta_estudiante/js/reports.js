@@ -46,11 +46,63 @@ const Reports = (() => {
     // const doc = new jsPDF();
     // doc.text('Reporte de integridad', 14, 20);
     // doc.save('reporte_integridad.pdf');
-    Swal.fire({
-      icon: 'warning',
-      title: 'PDF pendiente',
-      text: 'Debes completar la función exportPdf en js/reports.js.'
-    });
+    function exportPdf(report) {
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF();
+
+      let y = 20;
+
+      doc.setFontSize(16);
+      doc.text('REPORTE DE INTEGRIDAD - AGRODATA', 14, y);
+
+      y += 15;
+
+      doc.setFontSize(12);
+
+      doc.text(`Fecha: ${new Date().toLocaleString()}`, 14, y);
+      y += 10;
+
+      doc.text(`Total registros: ${report.summary.total}`, 14, y);
+      y += 10;
+
+      doc.text(`Registros válidos: ${report.summary.valid}`, 14, y);
+      y += 10;
+
+      doc.text(`Advertencias: ${report.summary.warnings}`, 14, y);
+      y += 10;
+
+      doc.text(`Errores: ${report.summary.errors}`, 14, y);
+      y += 10;
+
+      doc.text(
+        `Porcentaje de integridad: ${report.summary.integrityRate}%`,
+        14,
+        y
+      );
+
+      y += 20;
+
+      doc.text('Problemas detectados:', 14, y);
+
+      y += 10;
+
+      report.issues.forEach((issue, index) => {
+        if (y > 270) {
+          doc.addPage();
+          y = 20;
+        }
+
+        doc.text(
+          `${index + 1}. ${issue.source} fila ${issue.rowNumber}: ${issue.message}`,
+          14,
+          y
+        );
+
+        y += 10;
+      });
+
+      doc.save('reporte_integridad.pdf');
+    }
   }
 
   return { buildPlainTextReport, exportTxt, exportJson, exportPdf };

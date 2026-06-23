@@ -2,16 +2,16 @@
 
 Marca cada criterio al finalizar la revisión.
 
-- [ ] El proyecto abre correctamente en VS Code.
-- [ ] Las librerías fueron instaladas con `npm install`.
-- [ ] La carpeta `vendor/` fue creada con `npm run setup:libs`.
-- [ ] La web ejecuta correctamente con `npm run start`.
-- [ ] El CSV tiene encabezados claros.
-- [ ] El JSON conserva una estructura válida.
-- [ ] Identifiqué campos vacíos.
-- [ ] Identifiqué cantidades negativas.
-- [ ] Identifiqué datos no numéricos.
-- [ ] Identifiqué registros duplicados.
-- [ ] Completé validaciones en JavaScript.
-- [ ] Generé al menos un reporte.
-- [ ] Completé el README breve de entrega.
+- [X] El proyecto abre correctamente en VS Code.
+- [X] Las librerías fueron instaladas con `npm install`.
+- [X] La carpeta `vendor/` fue creada con `npm run setup:libs`.
+- [X] La web ejecuta correctamente con `npm run start`.
+- [X] El CSV tiene encabezados claros.
+- [X] El JSON conserva una estructura válida.
+- [X] Identifiqué campos vacíos.
+- [X] Identifiqué cantidades negativas.
+- [X] Identifiqué datos no numéricos.
+- [X] Identifiqué registros duplicados.
+- [X] Completé validaciones en JavaScript.
+- [X] Generé al menos un reporte.
+- [X] Completé el README breve de entrega.

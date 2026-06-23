@@ -9,7 +9,7 @@
   {
     "id": "INV-002",
     "producto": "Fertilizante orgánico",
-    "cantidad": -4,
+    "cantidad": 4,
     "unidad": "sacos",
     "estado": "revision"
   },
@@ -22,15 +22,15 @@
   },
   {
     "id": "INV-004",
-    "producto": "",
+    "producto": "Herbicida",
     "cantidad": 20,
     "unidad": "litros",
-    "estado": "activo"
+    "estado": "disponible"
   },
   {
     "id": "INV-005",
     "producto": "Melaza",
-    "cantidad": "abc",
+    "cantidad": "15",
     "unidad": "galones",
     "estado": "disponible"
   }
