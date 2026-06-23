@@ -1,0 +1,57 @@
+# Mejoras Semana 11 - Retroalimentación y mejora del artefacto de datos
+
+## 1. Checklist de mejoras
+
+☑ El proyecto abre correctamente en VS Code.  
+☑ La estructura de carpetas está organizada.  
+☑ Los archivos CSS, JS y data están separados correctamente.  
+☑ El archivo CSV tiene encabezados claros.  
+☑ El archivo JSON tiene estructura válida.  
+☑ No hay datos vacíos sin justificar.  
+☑ No hay cantidades negativas incorrectas.  
+☑ No hay datos duplicados innecesarios.  
+☑ El sistema muestra mensajes claros sobre la integridad de datos.  
+☑ El README explica cómo ejecutar el proyecto.  
+☑ Se aplicó al menos una mejora al proyecto.  
+
+---
+
+## 2. Revisión por pares
+
+Nombre del compañero: EMMANUEL CARMONA VILLADA
+
+Fortaleza encontrada:  
+El proyecto tiene una buena organización de carpetas y permite identificar fácilmente la lógica, los datos y la interfaz del sistema.
+
+Sugerencia de mejora:  
+Mejorar la validación de algunos datos del CSV, especialmente los campos vacíos y registros duplicados.
+
+Aspecto que recomienda revisar:  
+Revisión de la consistencia de los datos en el archivo CSV y validaciones en JavaScript.
+
+---
+
+## 3. Mejora aplicada
+
+Archivo modificado:  
+js/validators.js  
+
+Cambio realizado:  
+Se completaron las validaciones de cantidad negativa y detección de registros duplicados usando estructuras como Set para evitar repetición de datos.
+
+Por qué esta mejora fortalece la integridad u organización de la información:  
+Porque permite asegurar que los datos analizados sean confiables, evitando errores como registros repetidos o valores que no tienen sentido dentro del contexto del sistema. Esto mejora la calidad del análisis y la confiabilidad del reporte generado.
+
+---
+
+## 4. Reflexión final (150 a 250 palabras)
+
+En esta actividad aprendí la importancia de revisar y mejorar un proyecto ya desarrollado, enfocándome en la organización de archivos y la integridad de los datos. Comprendí que no basta con que un sistema funcione, sino que también debe manejar información correcta, completa y coherente para ser confiable.
+
+Trabajando con archivos CSV y JSON pude identificar cómo cada uno organiza la información de forma diferente, pero ambos requieren validaciones para evitar errores como datos vacíos, duplicados o valores incorrectos. Esto es fundamental en sistemas reales, ya que una mala calidad de datos puede generar decisiones equivocadas.
+
+La mejora que apliqué fue completar las validaciones en el archivo JavaScript, especialmente la detección de cantidades negativas y registros duplicados. Esto permitió que el sistema fuera más preciso al analizar la información.
+
+También entendí que la organización de carpetas en un proyecto web facilita el mantenimiento y la escalabilidad del sistema, ya que cada parte cumple una función específica.
+
+En general, esta experiencia me ayudó a fortalecer mis habilidades en análisis de datos, estructuración de proyectos y pensamiento lógico aplicado al desarrollo web, lo cual es esencial para futuros proyectos más complejos.
